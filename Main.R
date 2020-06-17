@@ -32,6 +32,9 @@ fit.svm <- train(Species~., data=dataset, method="svmRadial", metric=metric, trC
 set.seed(7)
 fit.rf <- train(Species~., data=dataset, method="rf", metric=metric, trControl=control)
 
+results <- resamples(list(lda=fit.lda, cart=fit.cart, knn=fit.knn, svm=fit.svm, rf=fit.rf))
+summary(results)
+
 
 
 
