@@ -14,3 +14,7 @@ y <- dataset[,5]
 par(mfrow=c(1,4))
 for(i in 1:4) {boxplot(x[,i], main=names(iris)[i])}
 
+control <- trainControl(method="cv", number=10)
+metric <- "Accuracy"
+
+
