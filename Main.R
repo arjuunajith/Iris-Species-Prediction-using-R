@@ -1,4 +1,3 @@
-# attach the iris dataset to the environment
 data(iris)
 dataset <- iris
 
